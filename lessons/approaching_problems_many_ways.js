@@ -46,14 +46,49 @@ const ninetiesToys = [
 Solve the prompt using a forEach. You may not use any other iterator methods.
 */
 
+findCheapToys()
+
 
 
 /* Round 2: filter and map
 Solve the prompt using a filter and map. You may not use any other iterator methods.
 */
 
-
+findCheapToys()
 
 /* Round 3: reduce
 Solve the prompt using a reduce. You may not use any other iterator methods.
 */
+// iterate through the nineties toys to return an array of toy names that are less than 20 
+// .reduce is like a .forEach without having to create the empty array
+
+//        reduce skeletons 
+  
+// retuns a number
+// const total = numbers.reduce((acc, num) => {
+//     //do stuff here
+//     return acc
+//   }, 0)
+ 
+// returns an array
+//   const result = toys.reduce((acc, toy) => {
+//     //do stuff here
+//     return acc
+//   }, [])
+
+    // returns an object
+// const result = elephants.reduce((acc, elephant) => {
+//     //do stuff here
+//     return acc
+//   }, {})
+
+// function findCheapToys () {
+//     const cheapToyNames = ninetiesToys.reduce((acc, toy) => {
+//         if (toy.price < 20) {
+//             acc.push(toy.name)
+//         }
+//         return acc
+//     }, [])
+//     return cheapToyNames
+// }
+// console.log(findCheapToys())

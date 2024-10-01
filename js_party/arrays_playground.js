@@ -2,7 +2,7 @@
       node js_party/arrays_playground.js
 */
 
-console.log("arrays_playground.js is running")
+//  console.log("arrays_playground.js is running")
 
 // PART 1: How do we access values in an array?
 
@@ -10,29 +10,36 @@ var people = ['Brad', 'Dante', 'Amy', 'Louis', 'Stephanie'];
 
 // 1a. First, predict what each console.log below is going to print to the console. Then, uncomment each console.log and check your predictions. Did anything surprise you? 
 
-// console.log(people);
+// console.log(people); //should return the array of string elements
+  // I was correct, that is what it did
 
-// console.log(people[3]);
+// console.log(people[3]); //should return Louis, the name in index 3
+  // it did, yay me
 
-// console.log(people[10]);
+// console.log(people[10]); // I think null?  there is no index position 10
+  // I was incorrect - it returned undefined
 
 var lotteryNumbers = [12, 33, 51, 62, 74, 88];
 
 // 1b. Log the entire lotteryNumbers array to the console
+// console.log(lotteryNumbers)
 
 // 1c. Log the first number to the console
+// console.log(lotteryNumbers[0])
 
 // 1d. Use interpolation or concatenation (google this!) to print the following string: 
 // "The second number is...33!"
-
+// console.log(`The second number is ${lotteryNumbers[1]}`)
 
 // PART 2: What type of information should arrays hold?
 
 var dog = ['Cappy', 'three years old', 'loves treats', 'is really cute'];
 // 2a. This array is a bad example of an array. Why?
+  // it appears to hold values instead of attribute keys and values eg name: 'Cappy'
 
 // 2b. Create an object that represents that data in a more organized way. Try to have at least one string, number, and boolean value in your object's key:value pairs
 
+var dog = {name: 'Cappy', age: 3, lovesTreats: true, description: 'Is really cute'}
 
 // PART 3: Does formatting matter?
 var modOneLessonsV1 = [
@@ -47,9 +54,10 @@ var modOneLessonsV1 = [
 var modOneLessonsV2 = ['JS: Data Types, Variables, Conditionals', 'JS: Intro to Functions', 'JS: Intro to Unit Testing', 'Dev Skills: Merge Conflicts', 'HTML: Intro to HTML Elements', 'CSS: Flexbox'];
 
 // 3a. Do you prefer the formatting of modOneLessonsV1 or V2 better? Why?
+  //modOneLessonsV1 - it is cleaner and easier to read
 
 // 3b. When might you choose to put a line break between each element of an array?
-
+  // if the element is long.  It is easier to read, one line for each attribute.
 
 // PART 4: Reassigning array values
 var favoriteCandy = ['skittles', 'm&ms', 'snickers', 'sour patch kids'];
@@ -58,15 +66,22 @@ favoriteCandy[1] = 'swedish fish';
 
 // 4a. What do you think the console log below will show?
 // console.log(favoriteCandy)
+    // I think it will change M&M's in the array (index position 1 to swedish fish)
+    // I was correct :) we reasigned the element in the new variable
 
 // 4b. Reassign snickers to be your favorite candy. Then print the array to the console to check that it worked.
 
-favoriteCandy[10] = 'almond joy';
+// favoriteCandy = ['Snickers']
+//console.log(favoriteCandy)
+// [ 'Snickers' ]
 
 // 4c. What do you think the console log below will show?
+//console.log(favoriteCandy)
+    // well this one will just show snickers because that is what I declared above.[]
+    // 
+// favoriteCandy[10] = 'almond joy';
 // console.log(favoriteCandy)
-
-
+    // I wasn't expecdting 9 empty indexes => [ 'Snickers', <9 empty items>, 'almond joy' ]
 // PART 5: Can you have an array of arrays?
 
 var numbers = [[1, 2, 3], [4, 5], [6, [7, 8, 9], 10]];
@@ -75,7 +90,7 @@ var numbers = [[1, 2, 3], [4, 5], [6, [7, 8, 9], 10]];
 
 // 5z. First, predict what each console.log below is going to print to the console. Then, uncomment each console.log and check your predictions. Did anything surprise you? 
 
-// console.log(numbers[0]);
+console.log(numbers[0]);  // I think it will return the array 1,2,3
 
 // console.log(numbers[2][1][2]);
 // ^^ Woah. Let's sit with this one for a minute. Break it down:
